@@ -35,7 +35,7 @@ def normal_user_page(request):
 
 @login_required
 async def chat_room(request, recipient_id):
-    # recipient = get_object_or_404(User, id=recipient_id)
+    recipient = get_object_or_404(User, id=recipient_id)
     room_name = sha256(f"{min(request.user.id, recipient.id)}_{max(request.user.id, recipient.id)}".encode()).hexdigest()
 
     # messages = await sync_to_async(list)(Message.objects.filter(
