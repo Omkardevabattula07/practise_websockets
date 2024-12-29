@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!-- <html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Register</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <button type="button" onclick="togglePassword('password')">👁️</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password-check">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password-check" name="password-check" placeholder="Confirm your password" required>
+                        <button type="button" onclick="togglePassword('password-check')">👁️</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" placeholder="Tell us about yourself" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="profile-pic">Profile Picture</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+                </div>
+                <div class="input-group">
+                    <label for="security-question">How are you?</label>
+                    <input type="text" id="security-question" name="security-answer" placeholder="Enter your answer!!" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="register-btn">Register</button>
+                    <!-- <button type="button" {% url 'login' %} class="login-btn">Go to Login</button> -->
+            <button type= "button"class="login-btn" onclick="window.location.href='{% url 'login' %}'">goToLogin</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+
+        function goToLogin() {
+            alert("Redirecting to login page..."); // Replace with actual redirection logic
+        }
+    </script>
+</body>
+</html>

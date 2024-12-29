@@ -1,2 +1,24 @@
-<h1>User Dashboard</h1>
-<a href="{% url 'private_chat' request.user.username %}">Enter Chat Room</a>
+<!-- <h1>User Dashboard</h1> -->
+<!-- <a href="{% url 'private_chat' request.user.username %}">Enter Chat Room</a> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Chat</title>
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="heading">Chat Securely with the Admin</h1>
+            <p class="info-text">We value your privacy. Connect securely and directly with the admin for your concerns or queries.</p>
+            <a href="{% url 'private_chat' request.user.username %}"class="chat-link">Enter Chat Room</a>
+
+            <!-- {% comment %} <a href="{% url 'chat_page' %}" class="chat-link">Start Chat</a> {% endcomment %} -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">Welcome to Our Platform</h1>
+        <p class="sub-heading">Your gateway to an amazing experience</p>
+        <div class="buttons">
+            <button class="btn btn-register" onclick="window.location.href='{% url 'register' %}'">
+                Register Here
+                <span class="tooltip">You need to register and wait for superuser approval</span>
+            </button>
+            <button class="btn btn-login" onclick="window.location.href='{% url 'login' %}'">
+                Login Now
+                <span class="tooltip">Let’s go! Log in and start exploring</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

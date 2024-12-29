@@ -1,4 +1,12 @@
-<h1>Chat Room: {{ room_name }}</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room: {{ room_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/private_chat.css' %}">
+</head>
+<!-- <h1>Chat Room: {{ room_name }}</h1> -->
 <div id="chat-log"></div>
 <input id="chat-message-input" type="text">
 <button id="chat-message-submit">Send</button>
@@ -24,3 +32,4 @@
         messageInput.value = '';
     };
 </script>
+</html>

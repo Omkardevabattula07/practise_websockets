@@ -1,0 +1,295 @@
+/* General Reset
+body, h1, p, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4, #fbc2eb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.form-box h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #ff6b81;
+    margin-bottom: 5px;
+}
+
+.form-box p {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #ff6b81;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: calc(100% - 40px);
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.password-wrapper button:hover {
+    color: #ff6b81;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #ff6b81, #ff4757);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff4757, #ff6b81);
+    transform: translateY(-3px);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link p {
+    font-size: 14px;
+    color: #444;
+}
+
+.register-link a {
+    color: #ff6b81;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* Reset Styles */
+body, h1, p, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #ffecd2, #fcb69f);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the form box */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Form box styles */
+.form-box {
+    background: linear-gradient(145deg, #8e44ad, #3498db);
+    color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    animation: slideIn 1.2s ease-out;
+    text-align: center;
+}
+
+/* Header and description */
+.form-box h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffeaa7;
+}
+
+.form-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+/* Input fields and labels */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #74b9ff;
+    background: #f0f4c3;
+}
+
+/* Password wrapper */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: calc(100% - 40px);
+    display: inline-block;
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.password-wrapper button:hover {
+    color: #f1c40f;
+}
+
+/* Button styles */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to left, #e74c3c, #f39c12);
+    transform: scale(1.05);
+}
+
+/* Link to register */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ecf0f1;
+}
+
+.register-link a {
+    color: #e67e22;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
